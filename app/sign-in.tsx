@@ -1,7 +1,15 @@
-import { View, Text, ScrollView, Image, TouchableOpacity } from "react-native";
+import {
+    View,
+    Text,
+    ScrollView,
+    Image,
+    TouchableOpacity,
+    Pressable,
+} from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
 import images from "@/constants/images";
+import { Link } from "expo-router";
 
 const SignIn = () => {
     const handleLogin = () => {
@@ -27,16 +35,12 @@ const SignIn = () => {
                         <Text className="text-secondary">Coffee shop</Text> App
                         with your email
                     </Text>
-                    <TouchableOpacity
-                        onPress={handleLogin}
-                        className="bg-secondary rounded-full w-full shadow-md shadow-zinc-300 py-4 mt-5"
+                    <Link
+                        className="bg-secondary rounded-full w-full shadow-md shadow-zinc-300 text-center text-fourth font-sora-bold text-xl py-4"
+                        href={"/register"}
                     >
-                        <View>
-                            <Text className="text-center text-fourth font-sora-bold text-xl">
-                                Get Started
-                            </Text>
-                        </View>
-                    </TouchableOpacity>
+                        Get Started
+                    </Link>
                 </View>
             </ScrollView>
         </SafeAreaView>
